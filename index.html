@@ -644,30 +644,22 @@
     </div>
 
    <!-- LAYER 3: Dedicated Video Screen (Fixed Mobile Responsive Container) -->
- <!-- LAYER 3: Landscape Video Screen na may malinis at working Full-Screen button -->
-    <div class="page-layer" id="layer-3">
-      <div style="width: 100%; max-width: 600px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; padding-bottom: 40px;">
-        
-        <h1 class="fancy-title" style="font-size: 2.3rem; margin-bottom: 5px;">A Movie For You 🎬</h1>
-        <p class="subtitle" style="margin-bottom: 15px; font-size: 0.95rem;">I-tap ang fullscreen icon sa video para mapanood nang malaki!</p>
+   <div class="page-layer" id="layer-3">
+     <h1 class="fancy-title" style="font-size: 2.5rem;">A Movie For You 🎬</h1>
+     <p class="subtitle" style="margin-bottom: 15px;">Press play to watch a short clip I made for you!</p>
 
-        <!-- Landscape Video Container (Walang harang para magamit ang play/fullscreen controls) -->
-        <div style="width: 100%; border-radius: 18px; overflow: hidden; border: 1px solid var(--card-border); box-shadow: 0 20px 40px rgba(0,0,0,0.8); background: #000; position: relative;">
-          <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #000;">
-            
-            <!-- Google Drive Video Iframe (May kasamang allowfullscreen para gumana ang full screen) -->
-            <iframe src="https://drive.google.com/file/d/1j0qMbk0yBzOPDAKTMZWY14LP19qGTugt/preview" width="100%" height="100%" style="border:none; position:absolute; top:0; left:0;" allow="autoplay; fullscreen" allowfullscreen="true"></iframe>
+     <div style="width: 100%; max-width: 500px; margin: 15px auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--card-border); box-shadow: 0 10px 30px rgba(0,0,0,0.6); background: #000;">
+       <div style="position: relative; width: 100%; height: auto; display: flex; justify-content: center; align-items: center;">
+         <!-- Fixed iframe wrapper style to prevent mobile browser control distortion -->
+         <iframe src="https://drive.google.com/file/d/1j0qMbk0yBzOPDAKTMZWY14LP19qGTugt/preview" width="100%" height="280" style="border: 0; display: block;" allow="autoplay" allowfullscreen></iframe>
+       </div>
+     </div>
 
-          </div>
-        </div>
-
-        <div class="seal-btn-container" style="margin-top: 30px;" onclick="revealLayer('layer-3', 'layer-4', onOpenVault)">
-          <div class="wax-seal">🗝️</div>
-          <div class="seal-text">OPEN SECRET VAULT</div>
-        </div>
-
-      </div>
-    </div>
+     <div class="seal-btn-container" onclick="revealLayer('layer-3', 'layer-4', onOpenVault)">
+       <div class="wax-seal">🗝️</div>
+       <div class="seal-text">OPEN SECRET VAULT</div>
+     </div>
+   </div>
 
     <!-- LAYER 4: Secret Content / Vault Screen (Flat Full Screen, No Card Container) -->
     <div class="page-layer" id="layer-4">
