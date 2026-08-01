@@ -643,15 +643,18 @@
       </div>
     </div>
 
-   <!-- LAYER 3: Dedicated Video Screen (Fixed Mobile Responsive Container) -->
+   <!-- LAYER 3: Dedicated Video Screen (Clean HTML5 Player Wrapper) -->
    <div class="page-layer" id="layer-3">
      <h1 class="fancy-title" style="font-size: 2.5rem;">A Movie For You 🎬</h1>
      <p class="subtitle" style="margin-bottom: 15px;">Press play to watch a short clip I made for you!</p>
 
-     <div style="width: 100%; max-width: 500px; margin: 15px auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--card-border); box-shadow: 0 10px 30px rgba(0,0,0,0.6); background: #000;">
-       <div style="position: relative; width: 100%; height: auto; display: flex; justify-content: center; align-items: center;">
-         <!-- Fixed iframe wrapper style to prevent mobile browser control distortion -->
-         <iframe src="https://drive.google.com/file/d/1j0qMbk0yBzOPDAKTMZWY14LP19qGTugt/preview" width="100%" height="280" style="border: 0; display: block;" allow="autoplay" allowfullscreen></iframe>
+     <div style="width: 100%; max-width: 420px; margin: 15px auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--card-border); box-shadow: 0 10px 30px rgba(0,0,0,0.6); background: #000;">
+       <div style="position: relative; width: 100%; aspect-ratio: 9/16; background: #000; display: flex; justify-content: center; align-items: center;">
+         <!-- Native HTML5 Video Element using direct download/stream link to bypass iframe UI overlay issues -->
+         <video controls playsinline preload="metadata" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+           <source src="https://drive.google.com/uc?export=download&id=1j0qMbk0yBzOPDAKTMZWY14LP19qGTugt" type="video/mp4">
+           Your browser does not support the video tag.
+         </video>
        </div>
      </div>
 
