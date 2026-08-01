@@ -643,29 +643,33 @@
       </div>
     </div>
 
-  <!-- LAYER 3: Dedicated Video Screen (Nilagyan ng Invisible Overlay para hindi lumabas ang pause/play controls) -->
+ <!-- LAYER 3: Full-Screen Dedicated Video Screen (Walang card, malaki ang espasyo) -->
    <div class="page-layer" id="layer-3">
-     <h1 class="fancy-title" style="font-size: 2.2rem; margin-bottom: 5px;">A Movie For You 🎬</h1>
-     <p class="subtitle" style="margin-bottom: 12px; font-size: 0.9rem;">Press play to watch a short clip I made for you!</p>
+     <div style="width: 100%; max-width: 400px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+       
+       <h1 class="fancy-title" style="font-size: 2.5rem; margin-bottom: 5px;">A Movie For You 🎬</h1>
+       <p class="subtitle" style="margin-bottom: 20px; font-size: 1rem;">Press play to watch a short clip I made for you!</p>
 
-     <div style="width: 100%; max-width: 290px; margin: 0 auto; border-radius: 20px; overflow: hidden; border: 1px solid var(--card-border); box-shadow: 0 10px 30px rgba(0,0,0,0.6); background: #000;">
-       <div style="position: relative; width: 100%; aspect-ratio: 9/16; max-height: 48vh; background: #000; margin: 0 auto;">
-         
-         <!-- Google Drive Video Iframe (Nilagyan ng autoplay=1 para kusa itong mag-play) -->
-         <iframe src="https://drive.google.com/file/d/1j0qMbk0yBzOPDAKTMZWY14LP19qGTugt/preview?autoplay=1" width="100%" height="100%" style="border:none; position:absolute; top:0; left:0;" allow="autoplay" allowfullscreen></iframe>
-         
-         <!-- ITO ANG TRANSPARENT HARANG: Pinipigilan nitong lumabas ang pause buttons kapag na-tap ang video -->
-         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; background: transparent;"></div>
+       <!-- Video Container na may malaking aspect ratio -->
+       <div style="width: 100%; max-width: 320px; border-radius: 24px; overflow: hidden; border: 1px solid var(--card-border); box-shadow: 0 20px 40px rgba(0,0,0,0.8); background: #000; position: relative;">
+         <div style="position: relative; width: 100%; aspect-ratio: 9/16; background: #000;">
+           
+           <!-- Google Drive Video Iframe -->
+           <iframe src="https://drive.google.com/file/d/1j0qMbk0yBzOPDAKTMZWY14LP19qGTugt/preview?autoplay=1" width="100%" height="100%" style="border:none; position:absolute; top:0; left:0;" allow="autoplay" allowfullscreen></iframe>
+           
+           <!-- Transparent Overlay para hindi lumabas ang pause/play controls kapag na-tap -->
+           <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; background: transparent;"></div>
 
+         </div>
        </div>
-     </div>
 
-     <div class="seal-btn-container" style="margin-top: 15px;" onclick="revealLayer('layer-3', 'layer-4', onOpenVault)">
-       <div class="wax-seal">🗝️</div>
-       <div class="seal-text">OPEN SECRET VAULT</div>
+       <div class="seal-btn-container" style="margin-top: 25px;" onclick="revealLayer('layer-3', 'layer-4', onOpenVault)">
+         <div class="wax-seal">🗝️</div>
+         <div class="seal-text">OPEN SECRET VAULT</div>
+       </div>
+
      </div>
    </div>
-
     <!-- LAYER 4: Secret Content / Vault Screen (Flat Full Screen, No Card Container) -->
     <div class="page-layer" id="layer-4">
       <div class="secret-flat-container">
